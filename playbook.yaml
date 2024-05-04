@@ -1,0 +1,12 @@
+---
+
+- name: Ping servers
+  hosts: all
+
+  tasks:
+    - name: Ping my servers
+      ping:
+
+    - name: Print message
+      debug:
+        msg: Hello World, you server is up! FQDN - {{ ansible_facts.fqdn }}
